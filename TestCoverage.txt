@@ -1,2 +1,2 @@
 Date,Package,Coverage,Instructions
-3/4/2014,org.adligo.tests,78.9%,1351,71
+3/4/2014,org.adligo.tests,83.0%,1465,83

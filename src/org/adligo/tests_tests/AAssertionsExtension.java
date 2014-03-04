@@ -15,6 +15,13 @@ public class AAssertionsExtension extends AAssertions {
 		assertEquals("a", (byte) 'a', new Byte((byte) 'a'));
 		assertEquals("a", new Byte((byte) 'a'), (byte) 'a');
 		
+		assertEquals('a', 'a');
+		assertEquals('a', new Character('a'));
+		assertEquals(new Character('a'), 'a');
+		assertEquals("a", 'a', 'a');
+		assertEquals("a", 'a', new Character('a'));
+		assertEquals("a", new Character('a'),'a');
+		
 		
 		assertEquals(0.0, 0.0);
 		assertEquals(0.0, new Double(0.0));
@@ -32,7 +39,7 @@ public class AAssertionsExtension extends AAssertions {
 		
 		
 		assertEquals(0,0);
-		assertEquals(0, new Integer(0));
+		assertEquals((int) 0, new Integer(0));
 		assertEquals(new Integer(0),0);
 		assertEquals("a",0,0);
 		assertEquals("a",0, new Integer(0));
@@ -45,6 +52,12 @@ public class AAssertionsExtension extends AAssertions {
 		assertEquals("a",0L, new Long(0));
 		assertEquals("a", new Long(0),0L);
 		
+		assertNotSame( 'a',  'b');
+		assertNotSame( 'a', new Character( 'b'));
+		assertNotSame(new Character( 'a'),  'b');
+		assertNotSame("a",  'a',  'b');
+		assertNotSame("a",  'a', new Character( 'b'));
+		assertNotSame("a", new Character( 'a'),  'b');
 		
 		assertNotSame((byte) 'a', (byte) 'b');
 		assertNotSame((byte) 'a', new Byte((byte) 'b'));
