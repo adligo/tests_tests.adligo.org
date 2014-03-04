@@ -6,7 +6,7 @@ import org.adligo.tests.AAssertions;
 
 public class AAssertionsExtension extends AAssertions {
 
-	public void assertMethods() {
+	public void equalsAsserts() {
 		assertCollectionEquals(Collections.EMPTY_LIST, Collections.EMPTY_LIST);
 		assertEquals((byte) 'a', (byte) 'a');
 		assertEquals((byte) 'a', new Byte((byte) 'a'));
@@ -51,7 +51,9 @@ public class AAssertionsExtension extends AAssertions {
 		assertEquals("a",0L,0L);
 		assertEquals("a",0L, new Long(0));
 		assertEquals("a", new Long(0),0L);
-		
+	}
+	
+	public void notSameAsserts() {
 		assertNotSame( 'a',  'b');
 		assertNotSame( 'a', new Character( 'b'));
 		assertNotSame(new Character( 'a'),  'b');
@@ -95,7 +97,56 @@ public class AAssertionsExtension extends AAssertions {
 		assertNotSame("a",0L,1L);
 		assertNotSame("a",0L, new Long(1));
 		assertNotSame("a", new Long(0),1L);
+	}
+	
+	public void notEqualsAsserts() {
+		assertNotEquals( 'a',  'b');
+		assertNotEquals( 'a', new Character( 'b'));
+		assertNotEquals(new Character( 'a'),  'b');
+		assertNotEquals("a",  'a',  'b');
+		assertNotEquals("a",  'a', new Character( 'b'));
+		assertNotEquals("a", new Character( 'a'),  'b');
 		
+		assertNotEquals((byte) 'a', (byte) 'b');
+		assertNotEquals((byte) 'a', new Byte((byte) 'b'));
+		assertNotEquals(new Byte((byte) 'a'), (byte) 'b');
+		assertNotEquals("a", (byte) 'a', (byte) 'b');
+		assertNotEquals("a", (byte) 'a', new Byte((byte) 'b'));
+		assertNotEquals("a", new Byte((byte) 'a'), (byte) 'b');
+		
+		
+		assertNotEquals(0.0, 1.0);
+		assertNotEquals(0.0, new Double(1.0));
+		assertNotEquals(new Double(0.0), 1.0);
+		assertNotEquals("a", 0.0, 1.0);
+		assertNotEquals("a", 0.0, new Double(1.0));
+		assertNotEquals("a", new Double(0.0), 1.0);
+		
+		assertNotEquals((float) 0.0,(float) 1.0);
+		assertNotEquals((float)0.0, new Float(1.0));
+		assertNotEquals(new Float(0.0),(float) 1.0);
+		assertNotEquals("a",(float) 0.0,(float) 1.0);
+		assertNotEquals("a",(float) 0.0, new Float(1.0));
+		assertNotEquals("a", new Float(0.0),(float) 1.0);
+		
+		
+		assertNotEquals(0,1);
+		assertNotEquals(0, new Integer(1));
+		assertNotEquals(new Integer(0),1);
+		assertNotEquals("a",0,1);
+		assertNotEquals("a",0, new Integer(1));
+		assertNotEquals("a", new Integer(0),1);
+		
+		assertNotEquals(0L,1L);
+		assertNotEquals(0L, new Long(1));
+		assertNotEquals(new Long(0),1L);
+		assertNotEquals("a",0L,1L);
+		assertNotEquals("a",0L, new Long(1));
+		assertNotEquals("a", new Long(0),1L);
+	}
+	
+	public void miscAsserts() {
+
 		assertTrue(true);
 		assertTrue("a", true);
 		assertFalse(false);

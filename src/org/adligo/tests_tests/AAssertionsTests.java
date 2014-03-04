@@ -28,8 +28,22 @@ public class AAssertionsTests extends ATest {
 	}
 	
 	@Test
-	public void testMethods() {
-		assertions.assertMethods();
+	public void testEquals() {
+		assertions.equalsAsserts();
 	}
 
+	@Test
+	public void testMisc() {
+		assertions.miscAsserts();
+	}
+	
+	@Test
+	public void testNotSame() {
+		assertions.notSameAsserts();
+	}
+	
+	@Test
+	public void testNotEquals() {
+		assertions.notEqualsAsserts();
+	}
 }
