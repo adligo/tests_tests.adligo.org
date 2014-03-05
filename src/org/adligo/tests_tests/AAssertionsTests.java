@@ -1,8 +1,9 @@
 package org.adligo.tests_tests;
 
-import org.adligo.tests.AAssertions;
 import org.adligo.tests.ATest;
-import org.adligo.tests.AssertionStats;
+import org.adligo.tests.shared.AAssertions;
+import org.adligo.tests.shared.AssertionStats;
+import org.adligo.tests_tests.shared.AAssertionsExtension;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

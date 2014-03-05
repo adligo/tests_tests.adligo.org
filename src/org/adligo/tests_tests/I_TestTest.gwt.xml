@@ -1,0 +1,8 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="org.adligo.tests.shared"/>
+	<source path="shared"/>
+</module>
+
+
+	

@@ -1,8 +1,8 @@
-package org.adligo.tests_tests;
+package org.adligo.tests_tests.shared;
 
 import java.util.Collections;
 
-import org.adligo.tests.AAssertions;
+import org.adligo.tests.shared.AAssertions;
 
 public class AAssertionsExtension extends AAssertions {
 

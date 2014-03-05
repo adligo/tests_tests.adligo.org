@@ -5,9 +5,9 @@ import java.util.Collections;
 
 import junit.framework.TestCase;
 
-import org.adligo.tests.AAssertions;
 import org.adligo.tests.ATest;
-import org.adligo.tests.AssertionStats;
+import org.adligo.tests.shared.AAssertions;
+import org.adligo.tests.shared.AssertionStats;
 import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
