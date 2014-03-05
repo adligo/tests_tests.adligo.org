@@ -22,9 +22,7 @@ public class AAssertionsTests extends ATest {
 	
 	@AfterClass
 	public static void afterClass() {
-		stats.logAssertionStats(ATestTests.class, 
-				AAssertions.class.getPackage().getName(),
-				assertions.getAssertionCount());
+		stats.logAssertionStats(ATestTests.class, assertions);
 	}
 	
 	@Test
