@@ -12,7 +12,6 @@ import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
 public class AAssertionsTests extends ATest {
-	private static AssertionStats stats = new AssertionStats();
 	private static AAssertionsExtension assertions = new AAssertionsExtension();
 	
 	public AAssertionsTests() {
@@ -23,7 +22,7 @@ public class AAssertionsTests extends ATest {
 	
 	@AfterClass
 	public static void afterClass() {
-		stats.logAssertionStats(ATestTests.class, assertions);
+		AssertionStats.logAssertionStats(ATestTests.class, assertions);
 	}
 	
 	@Test

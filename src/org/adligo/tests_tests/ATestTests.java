@@ -15,12 +15,10 @@ import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
 public class ATestTests extends TestCase {
-	private static AssertionStats stats = new AssertionStats();
-	
 	
 	@AfterClass
 	public static void afterClass() {
-		stats.logAssertionStats(ATestTests.class, 
+		AssertionStats.logAssertionStats(ATestTests.class, 
 				AAssertions.class.getPackage().getName(),
 				0);
 	}
