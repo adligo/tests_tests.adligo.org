@@ -2,10 +2,7 @@ package org.adligo.tests_tests;
 
 import org.adligo.tests.ATest;
 import org.adligo.tests.shared.AAssertions;
-import org.adligo.tests.shared.AssertionStats;
 import org.adligo.tests_tests.shared.AAssertionsExtension;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -17,12 +14,6 @@ public class AAssertionsTests extends ATest {
 	public AAssertionsTests() {
 		assertions.setTest(this);
 		assertIsEquals(this, assertions.getTest());
-	}
-	
-	
-	@AfterClass
-	public static void afterClass() {
-		AssertionStats.logAssertionStats(ATestTests.class, assertions);
 	}
 	
 	@Test
@@ -43,5 +34,11 @@ public class AAssertionsTests extends ATest {
 	@Test
 	public void testNotEquals() {
 		assertions.notEqualsAsserts();
+	}
+
+	@Override
+	public String getScope() {
+		// TODO Auto-generated method stub
+		return AAssertions.class.getName();
 	}
 }

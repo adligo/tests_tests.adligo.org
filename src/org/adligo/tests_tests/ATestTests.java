@@ -1,58 +1,41 @@
 package org.adligo.tests_tests;
 
-import java.util.ArrayList;
 import java.util.Collections;
 
-import junit.framework.TestCase;
-
 import org.adligo.tests.ATest;
-import org.adligo.tests.shared.AAssertions;
-import org.adligo.tests.shared.AssertionStats;
-import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
-public class ATestTests extends TestCase {
+public class ATestTests extends ATest {
 	
-	@AfterClass
-	public static void afterClass() {
-		AssertionStats.logAssertionStats(ATestTests.class, 
-				AAssertions.class.getPackage().getName(),
-				0);
+	public ATestTests() {
+		super("hey");
 	}
 	
 	@Test
 	public void testMethods() {
-		ATest f = new ATest();
-		final ATest t = new ATest("hey");
-		t.logStart();
-		t.
-		assertEquals("hey", t.getName());
-		t.assertIsEquals("a", "a");
-		t.assertIsEquals("a,", "a", "a");
-		t.assertIsFalse(false);
-		t.assertIsFalse("a", false);
-		t.assertIsTrue(true);
-		t.assertIsTrue("a", true);
-		t.assertIsNotNull("a");
-		t.assertIsNotNull("a", "a");
-		t.assertIsNotSame("a", "b");
-		t.assertIsNotSame("a", "a","b");
-		t.assertIsNull(null);
-		t.assertIsNull("a", null);
-		t.assertCollectionEquals(Collections.EMPTY_LIST, Collections.EMPTY_LIST);
-		t.assertMapEquals(Collections.EMPTY_MAP, Collections.EMPTY_MAP);
-		Runnable r = new Runnable() {
-			
-			@Override
-			public void run() {
-				t.waiter();
-			}
-		};
-		Thread thread = new Thread(r);
-		thread.start();
-		t.setLastTestFinished();
+		assertEquals("hey", getName());
+		assertIsEquals("a", "a");
+		assertIsEquals("a,", "a", "a");
+		assertIsFalse(false);
+		assertIsFalse("a", false);
+		assertIsTrue(true);
+		assertIsTrue("a", true);
+		assertIsNotNull("a");
+		assertIsNotNull("a", "a");
+		assertIsNotSame("a", "b");
+		assertIsNotSame("a", "a","b");
+		assertIsNull(null);
+		assertIsNull("a", null);
+		assertCollectionEquals(Collections.EMPTY_LIST, Collections.EMPTY_LIST);
+		assertMapEquals(Collections.EMPTY_MAP, Collections.EMPTY_MAP);
+		
+	}
+
+	@Override
+	public String getScope() {
+		return ATest.class.getName();
 	}
 }
