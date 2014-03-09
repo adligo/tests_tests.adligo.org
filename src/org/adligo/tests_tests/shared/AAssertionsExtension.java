@@ -161,10 +161,4 @@ public class AAssertionsExtension extends AAssertions {
 		assertNotNull("a");
 		assertNotNull("a","a");
 	}
-	
-	@Override
-	public String getPackage() {
-		return AAssertions.class.getPackage().getName();
-	}
-
 }
