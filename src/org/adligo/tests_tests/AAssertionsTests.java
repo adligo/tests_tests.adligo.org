@@ -36,9 +36,4 @@ public class AAssertionsTests extends ATest {
 		assertions.notEqualsAsserts();
 	}
 
-	@Override
-	public String getScope() {
-		// TODO Auto-generated method stub
-		return AAssertions.class.getName();
-	}
 }
