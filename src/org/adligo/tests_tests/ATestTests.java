@@ -34,8 +34,4 @@ public class ATestTests extends ATest {
 		
 	}
 
-	@Override
-	public String getScope() {
-		return ATest.class.getName();
-	}
 }
