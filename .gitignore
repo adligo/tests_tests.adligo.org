@@ -1,6 +1,7 @@
 /bin/
-/classes/
 /build/
+/classes/
+/classes_e/
 /test_reports/
 /tests_tests.jar
 /adligo_runner.log
